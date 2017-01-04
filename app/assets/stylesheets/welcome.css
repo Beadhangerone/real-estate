@@ -3,8 +3,17 @@
 		margin: 0;
 	}
 
+	hr{
+		border: 2px solid;
+		border-image: linear-gradient(to left, transparent, gray, transparent) 1;
+	}
+
 	.container{
 		padding: 0;
+	}
+
+	.shadow{
+		box-shadow: 0px 60px 80px -48px rgba(0,0,0,1);
 	}
 
 /*custom END*/
@@ -13,10 +22,9 @@
 
 #header{
 	color: white;
-	height: 425px;
+	height: 525px;
 	background: #1d4242 url('/header-pattern.png') center bottom;
 	background-size: cover;
-	box-shadow: 0px 60px 80px -48px rgba(0,0,0,1);
 }
 
 #nav-bar{
@@ -61,7 +69,7 @@
 /*Message*/
 	#message h2{
 		font-family: Calibri;
-		margin-top: 0;
+		margin-top: 35px;
 		font-size: 47px;
 	}
 	#message h4{
@@ -71,18 +79,17 @@
 	}
 
 	#slogan{
-		margin-top: 40px;
+		margin-top: 60px;
 		font-size: 26px;
 		color: #b4ffff;
 	}
 /*Message END*/
 
 #main-image{
-	box-shadow: 0px 60px 80px -48px rgba(0,0,0,1);
 	float: right;
 	margin-right: 50px;
-	width: 580px;
-	height: 290px;
+	width: 680px;
+	height: 370px;
 }
 
 /*Header END*/
@@ -94,5 +101,20 @@
 		background: -moz-linear-gradient(top, #bcbcbc 0%, white 100%);
 		background: -webkit-linear-gradient(top, #bcbcbc 0%, white 100%);
 		background: linear-gradient(to bottom, #bcbcbc 0%, white 100%);
+	}
+
+	.landing-icon{
+		width: 60px;
+		height:60px;
+	}
+
+	.adv-head{
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+
+	.adv-text{
+		width: 80%;
+		text-align: center;
 	}
 /*Main Content END*/
