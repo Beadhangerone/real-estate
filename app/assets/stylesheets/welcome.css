@@ -115,7 +115,7 @@
 
 /*Main Content*/
 	.main-block{
-		height: 600px;	
+		min-height: 600px;	
 		background: #bcbcbc;
 		background: -moz-linear-gradient(top, #bcbcbc, white);
 		background: -webkit-linear-gradient(top, #bcbcbc, white);
@@ -166,7 +166,7 @@
 
 	.footer{
 		color: white;
-		margin-top: 90px;
+		margin-top: 60px;
 		height: 100px;	
 		background: #1d4242;
 		background: -moz-linear-gradient(left, #5a7373, #1d4242, #5a7373);
