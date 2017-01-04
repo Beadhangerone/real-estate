@@ -32,7 +32,7 @@
 		}
 
 		.gradient-white-gray{
-			background: -webkit-linear-gradient( white, gray);
+			background: -webkit-linear-gradient(white, gray);
 			-webkit-background-clip: text;
 		  	-webkit-text-fill-color: transparent;
 		}
@@ -69,8 +69,12 @@
 	font-size: 25px;
 	font-variant: small-caps;
 	}
-/*
-	b4ffff*/
+
+	#slogan{
+		margin-top: 40px;
+		font-size: 26px;
+		color: #b4ffff;
+	}
 /*Message END*/
 
 #main-image{
@@ -82,3 +86,13 @@
 }
 
 /*Header END*/
+
+/*Main Content*/
+	.main-block{
+		height: 600px;	
+		background: #bcbcbc;
+		background: -moz-linear-gradient(top, #bcbcbc 0%, white 100%);
+		background: -webkit-linear-gradient(top, #bcbcbc 0%, white 100%);
+		background: linear-gradient(to bottom, #bcbcbc 0%, white 100%);
+	}
+/*Main Content END*/
