@@ -1,33 +1,66 @@
-/*main color: #1d4242*/
-body{
-	margin: 0;
-}
-.main-container{
-	padding-left: 20px;
-	padding-right: 20px;
-}
+/*custom*/
+	body{
+		margin: 0;
+	}
+
+
+	.cleafix:before,
+	.clearfix:after{
+		content: " ";
+		display: table;
+	}
+
+	.clearfix:after{clear: both;}
+
+	.container{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+/*custom END*/
 
 /*Header*/
 
 #header{
 	height: 465px;
-	background-color: #1d4242;
-	background-image: url('/header-pattern.png');
+	background: #1d4242 url('/header-pattern.png') center bottom;
 	background-size: cover;
 }
+	/*Company logo*/
+		.company-name{
+			font-size: 50px;
+			float: left;
+		}
 
-.company-name{
-	font-size: 50px;
-}
+		.gradient-white-gray{
+			background: -webkit-linear-gradient( white, gray);
+			-webkit-background-clip: text;
+		  	-webkit-text-fill-color: transparent;
+		}
+	/*Company logo END*/
 
-.gradient-white-gray{
-	background: -webkit-linear-gradient( white, gray);
-	-webkit-background-clip: text;
-  	-webkit-text-fill-color: transparent;
-}
+	/*Navigation*/
+		.navigation{
+			float: right;
+			margin-top: 30px;
+		}
+		.navigation li{
+			float:left;
+			margin-right: 40px;
+		}
+
+		.navigation li:last-child {margin-right: 0}
+
+		.navigation a{
+			text-transform: uppercase;
+			font: 14px Arial, sans-serif;
+			color: white;
+		}
+	/*Navigation END*/
 
 #nav-bar{
-	padding-top: 36px;
+	position: absolute;
+	width: 960px;
+	padding-top: 20px;
 }
 
 
