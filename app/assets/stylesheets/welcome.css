@@ -111,6 +111,7 @@
 	.adv-head{
 		margin-top: 15px;
 		margin-bottom: 15px;
+		color: #1d4542;
 	}
 
 	.adv-text{
@@ -131,8 +132,26 @@
 	.adv-btn:hover{
 		cursor: pointer;
 		background: #bcbcbc;
-		background: -moz-linear-gradient(left, #416262 0%, #1d4545 100%);
-		background: -webkit-linear-gradient(left, #416262 0%, #1d4545 100%);
-		background: linear-gradient(to right, #416262 0%, #1d4545 100%);
+		background: -moz-linear-gradient(left, #416262 0%, #1d4542 100%);
+		background: -webkit-linear-gradient(left, #416262 0%, #1d4542 100%);
+		background: linear-gradient(to right, #416262 0%, #1d4542 100%);
+	}
+
+	.example-img{
+		height: 170px;
+		margin-top: 40px;
 	}
 /*Main Content END*/
+
+/*Footer*/
+
+.footer{
+	margin-top: 90px;
+	height: 160px;	
+	background: #1d4242;
+	background: -moz-linear-gradient(left, #5a7373, #1d4242, #5a7373);
+	background: -webkit-linear-gradient(left, #5a7373, #1d4242, #5a7373);
+	background: linear-gradient(to right, #5a7373, #1d4242, #5a7373);
+}
+
+/*Footer END*/
