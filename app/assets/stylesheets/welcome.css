@@ -117,4 +117,22 @@
 		width: 80%;
 		text-align: center;
 	}
+
+	.adv-btn{
+		margin-top: 15px;
+		margin-left: 5px;
+		width: 150px;
+		background-color: #1d4242; 
+		color: white;
+		text-align: center;
+		border-radius: 4px;
+	}
+
+	.adv-btn:hover{
+		cursor: pointer;
+		background: #bcbcbc;
+		background: -moz-linear-gradient(left, #416262 0%, #1d4545 100%);
+		background: -webkit-linear-gradient(left, #416262 0%, #1d4545 100%);
+		background: linear-gradient(to right, #416262 0%, #1d4545 100%);
+	}
 /*Main Content END*/
