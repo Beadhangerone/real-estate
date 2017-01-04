@@ -3,31 +3,31 @@
 		margin: 0;
 	}
 
-
-	.cleafix:before,
-	.clearfix:after{
-		content: " ";
-		display: table;
-	}
-
-	.clearfix:after{clear: both;}
-
 	.container{
-		padding-left: 20px;
-		padding-right: 20px;
+		padding: 0;
 	}
+
 /*custom END*/
 
 /*Header*/
 
 #header{
-	height: 465px;
+	color: white;
+	height: 425px;
 	background: #1d4242 url('/header-pattern.png') center bottom;
 	background-size: cover;
+	box-shadow: 0px 60px 80px -48px rgba(0,0,0,1);
+}
+
+#nav-bar{
+	margin: 20px 0;
 }
 	/*Company logo*/
 		.company-name{
-			font-size: 50px;
+			font-family: Arial;
+			font-variant: small-caps;
+			font-weight: bold;
+			font-size: 40px;
 			float: left;
 		}
 
@@ -41,9 +41,10 @@
 	/*Navigation*/
 		.navigation{
 			float: right;
-			margin-top: 30px;
+			margin-top: 20px;
 		}
 		.navigation li{
+			list-style: none;
 			float:left;
 			margin-right: 40px;
 		}
@@ -57,10 +58,27 @@
 		}
 	/*Navigation END*/
 
-#nav-bar{
-	position: absolute;
-	width: 960px;
-	padding-top: 20px;
+/*Message*/
+	#message h2{
+		font-family: Calibri;
+		margin-top: 0;
+		font-size: 47px;
+	}
+	#message h4{
+	font-family: "Segoe UI";
+	font-size: 25px;
+	font-variant: small-caps;
+	}
+/*
+	b4ffff*/
+/*Message END*/
+
+#main-image{
+	box-shadow: 0px 60px 80px -48px rgba(0,0,0,1);
+	float: right;
+	margin-right: 50px;
+	width: 580px;
+	height: 290px;
 }
 
-
+/*Header END*/
