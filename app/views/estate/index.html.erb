@@ -1,3 +1,9 @@
 <%=render partial: '/estate/params-block' %>
 
-
+<%if @estates%>
+	<%@estates.each do |estate|%>
+		state:<%=estate.state%>
+		region:<%=estate.region%>
+		bedrooms:<%=estate.bedrooms%>
+	<%end%>
+<%end%>
