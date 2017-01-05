@@ -8,6 +8,10 @@
 		border-image: linear-gradient(to left, transparent, gray, transparent) 1;
 	}
 
+	a:hover{
+		text-decoration: none
+	}
+
 	.container{
 		padding: 0;
 	}
@@ -105,6 +109,23 @@
 		}
 	/*Message END*/
 
+	/*Start button*/
+		#start-btn{
+			width: 230px;
+			margin-top: 20px;
+			background-color: #b4ffff;
+			color: #1d4242;
+			font-size: 19px;
+		}
+
+		#start-btn:hover{
+			border-color: rgba(0,0,0,0.77);
+			-webkit-box-shadow: inset 6px -6px 92px -15px rgba(0,0,0,0.77);
+			-moz-box-shadow: inset 6px -6px 92px -15px rgba(0,0,0,0.77);
+			box-shadow: inset 6px -6px 92px -15px rgba(0,0,0,0.77);
+		}
+	/*Start button END*/
+
 	#main-image{
 		float: right;
 		margin-right: 50px;
@@ -144,16 +165,19 @@
 		width: 150px;
 		background-color: #1d4242; 
 		color: white;
-		text-align: center;
-		border-radius: 4px;
+		text-decoration: none;
 	}
 
 	.adv-btn:hover{
-		cursor: pointer;
+		color: white;
 		background: #bcbcbc;
 		background: -moz-linear-gradient(left, #416262, #1d4542);
 		background: -webkit-linear-gradient(left, #416262, #1d4542);
 		background: linear-gradient(to right, #416262, #1d4542);
+	}
+
+	.adv-btn:focus{
+		color: white;
 	}
 
 	.example-img{
