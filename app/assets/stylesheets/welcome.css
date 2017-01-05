@@ -43,6 +43,21 @@
 			box-shadow: 0px 60px 80px -50px rgba(0,0,0,1);
 		}
 	/*Shadows END*/
+
+	/*Fonts*/
+		@font-face{
+			font-family: lombriga;
+    		src: url(/fonts/Lombriga.ttf);
+		}
+
+		.lombriga{font-family: lombriga}
+
+		@font-face{
+			font-family: asphalt;
+    		src: url(/fonts/asphalt.ttf);
+		}
+		.asphalt{font-family: asphalt}
+	/*Fonts END*/
 /*custom END*/
 
 /*Header*/
@@ -59,10 +74,7 @@
 	}
 	/*Company logo*/
 		.company-name{
-			font-family: Arial;
-			font-variant: small-caps;
-			font-weight: bold;
-			font-size: 40px;
+			font-size: 43px;
 			float: left;
 			background: -webkit-linear-gradient(white, gray);
 			-webkit-background-clip: text;
@@ -89,12 +101,10 @@
 
 	/*Message*/
 		#message h2{
-			font-family: Calibri;
 			margin-top: 35px;
-			font-size: 47px;
+			font-size: 52px;
 		}
 		#message h4{
-		font-family: "Segoe UI";
 		font-size: 25px;
 		font-variant: small-caps;
 		}
@@ -116,10 +126,10 @@
 		}
 
 		#start-btn:hover{
-			border-color: rgba(0,0,0,0.77);
-			-webkit-box-shadow: inset 6px -6px 92px -15px rgba(0,0,0,0.77);
-			-moz-box-shadow: inset 6px -6px 92px -15px rgba(0,0,0,0.77);
-			box-shadow: inset 6px -6px 92px -15px rgba(0,0,0,0.77);
+			background: #94d6d6;
+		background: -moz-linear-gradient(left, #94d6d6, #b1fbfb);
+		background: -webkit-linear-gradient(left, #94d6d6, #b1fbfb);
+		background: linear-gradient(to right, #94d6d6, #b1fbfb);
 		}
 	/*Start button END*/
 
