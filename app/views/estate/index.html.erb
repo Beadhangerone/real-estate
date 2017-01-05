@@ -1,35 +1,65 @@
-<form method="get" class="form-group">
-	<caption>City:</caption>
-	<select class="form-control" name="city" onchange='this.form.submit()'>
-		<option disabled="" selected="">Choose your city</option>
-		<option <%if params[:city]=='Chisinau'%> selected <%end%>>Chisinau</option>
-		<option <%if params[:city]=='Balti'%> selected <%end%>>Balti</option>
-		<option <%if params[:city]=='Soroca'%> selected <%end%>>Soroca</option>
-		<option <%if params[:city]=='Orhei'%> selected <%end%>>Orhei</option>
-	</select>
+<div class="shadow-sm params-block">
 
-	<caption>Region:</caption>
-	<select class="form-control"  name="region" onchange='this.form.submit()' 
-		<%unless params[:city]%> 
-			disabled 
-		<%end%>
-	>
+	<form method="get" class="form-group">
+
+		<caption>City:</caption>
+		<select class="form-control" name="city" onchange='this.form.submit()'>
+			<option disabled="" selected="">Choose the city</option>
+			<option <%if params[:city]=='New York'%> selected <%end%>>New York</option>
+			<option <%if params[:city]=='Los Angeles'%> selected <%end%>>Los Angeles</option>
+			<option <%if params[:city]=='California'%> selected <%end%>>California</option>
+			<option <%if params[:city]=='Texas'%> selected <%end%>>Texas</option>
+		</select>
+
+
+		<caption>Region:</caption>
+		<select class="form-control" <%unless params[:city]%> disabled <%end%>
+			name="region" onchange='this.form.submit()'>
+
 			<option disabled="" selected="">Choose the region</option>
-		<%if params[:city]=='Chisinau'%> 
-			<option>Botanica</option>
-			<option>Centru</option>
-			<option>Ciocana</option>
-			<option>Buiucani</option>
-		<%end%>
 
-		<%if params[:city]=='Balti'%> 
-			<option>Balti 1</option>
-			<option>Balti 2</option>
-			<option>Balti 3</option>
-			<option>Balti 4</option>
-		<%end%>
+			<%if params[:city]=='New York'%> 
+				<option <%if params[:region]=='NY 1'%> selected <%end%>>NY 1</option>
+				<option <%if params[:region]=='NY 2'%> selected <%end%>>NY 2</option>
+				<option <%if params[:region]=='NY 3'%> selected <%end%>>NY 3</option>
+				<option <%if params[:region]=='NY 4'%> selected <%end%>>NY 4</option>
+			<%end%>
 
-	</select>
+			<%if params[:city]=='Los Angeles'%> 
+				<option <%if params[:region]=='LA 1'%> selected <%end%>>LA 1</option>
+				<option <%if params[:region]=='LA 2'%> selected <%end%>>LA 2</option>
+				<option <%if params[:region]=='LA 3'%> selected <%end%>>LA 3</option>
+				<option <%if params[:region]=='LA 4'%> selected <%end%>>LA 4</option>
+			<%end%>
 
-</form>
+			<%if params[:city]=='California'%> 
+				<option <%if params[:region]=='CA 1'%> selected <%end%>>CA 1</option>
+				<option <%if params[:region]=='CA 2'%> selected <%end%>>CA 2</option>
+				<option <%if params[:region]=='CA 3'%> selected <%end%>>CA 3</option>
+				<option <%if params[:region]=='CA 4'%> selected <%end%>>CA 4</option>
+			<%end%>
 
+			<%if params[:city]=='Texas'%> 
+				<option <%if params[:region]=='TX 1'%> selected <%end%>>TX 1</option>
+				<option <%if params[:region]=='TX 2'%> selected <%end%>>TX 2</option>
+				<option <%if params[:region]=='TX 3'%> selected <%end%>>TX 3</option>
+				<option <%if params[:region]=='TX 4'%> selected <%end%>>TX 4</option>
+			<%end%>
+		</select>
+
+		<caption>Bedrooms:</caption>
+		<select class="form-control"<%unless params[:region]%> disabled <%end%>
+		name="bedrooms"  onchange='this.form.submit()'>
+
+		<option disabled="" selected="">Choose bedrooms</option>
+
+		<option <%if params[:bedrooms]=='1'%> selected <%end%>>1</option>
+		<option <%if params[:bedrooms]=='2'%> selected <%end%>>2</option>
+		<option <%if params[:bedrooms]=='3'%> selected <%end%>>3</option>
+		<option <%if params[:bedrooms]=='4'%> selected <%end%>>4</option>
+		<option <%if params[:bedrooms]=='5'%> selected <%end%>>5</option>
+			
+		</select>
+
+	</form>
+</div>

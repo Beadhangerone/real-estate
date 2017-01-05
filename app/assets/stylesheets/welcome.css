@@ -64,9 +64,6 @@
 			font-weight: bold;
 			font-size: 40px;
 			float: left;
-		}
-
-		.gradient-white-gray{
 			background: -webkit-linear-gradient(white, gray);
 			-webkit-background-clip: text;
 		  	-webkit-text-fill-color: transparent;

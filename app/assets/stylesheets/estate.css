@@ -1,0 +1,6 @@
+.params-block{
+	padding: 20px;
+	background: -moz-linear-gradient(top, #dadada, #fbfbfb);
+	background: -webkit-linear-gradient(top, #dadada, #fbfbfb);
+	background: linear-gradient(to bottom, #dadada, #fbfbfb);
+}
