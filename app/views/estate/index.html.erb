@@ -1,0 +1,35 @@
+<form method="get" class="form-group">
+	<caption>City:</caption>
+	<select class="form-control" name="city" onchange='this.form.submit()'>
+		<option disabled="" selected="">Choose your city</option>
+		<option <%if params[:city]=='Chisinau'%> selected <%end%>>Chisinau</option>
+		<option <%if params[:city]=='Balti'%> selected <%end%>>Balti</option>
+		<option <%if params[:city]=='Soroca'%> selected <%end%>>Soroca</option>
+		<option <%if params[:city]=='Orhei'%> selected <%end%>>Orhei</option>
+	</select>
+
+	<caption>Region:</caption>
+	<select class="form-control"  name="region" onchange='this.form.submit()' 
+		<%unless params[:city]%> 
+			disabled 
+		<%end%>
+	>
+			<option disabled="" selected="">Choose the region</option>
+		<%if params[:city]=='Chisinau'%> 
+			<option>Botanica</option>
+			<option>Centru</option>
+			<option>Ciocana</option>
+			<option>Buiucani</option>
+		<%end%>
+
+		<%if params[:city]=='Balti'%> 
+			<option>Balti 1</option>
+			<option>Balti 2</option>
+			<option>Balti 3</option>
+			<option>Balti 4</option>
+		<%end%>
+
+	</select>
+
+</form>
+

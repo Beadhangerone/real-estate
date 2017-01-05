@@ -3,5 +3,7 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
+  get '/estate' => 'estate#index', as: 'estate_index'
+
   get '/about' => 'welcome#about', as: 'about'
 end
