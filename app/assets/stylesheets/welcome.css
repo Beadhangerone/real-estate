@@ -65,10 +65,10 @@
 		.infinite{font-family: infinite}
 
 		@font-face{
-			font-family: modernroman;
-			src: url(/fonts/modern_roman.otf)
+			font-family: empty_apartments;
+			src: url(/fonts/empty_apartments.ttf)
 		}
-		.modernroman{font-family: modernroman}
+		.empty-apartments{font-family: empty_apartments}
 	/*Fonts END*/
 /*custom END*/
 
@@ -77,17 +77,20 @@
 	#header{
 		color: white;
 		padding-bottom: 30px;
-		background: #1d4242 url('/header-pattern.png');
+		background: rgba(30, 70, 70, 1) url('/header-pattern.png');
 		background-size: cover;
 	}
 
 	#nav-bar{
 		margin-top: 20px;
-		margin-bottom: 5px;
+		margin-bottom: 10px;
+		border-bottom: 2px solid; 
+		border-image: linear-gradient(to right, transparent, #b4ffff, transparent) 1;
 	}
 	/*Company logo*/
 		.company-name{
-			font-size: 43px;
+			font-size: 60px;
+			line-height: 50px;
 			float: left;
 			background: -webkit-linear-gradient(white, gray);
 			-webkit-background-clip: text;
@@ -133,18 +136,19 @@
 
 	/*Start button*/
 		#start-btn{
+			/*#e1cf08*/
 			width: 230px;
 			margin-top: 30px;
-			background-color: #b4ffff;
+			background-color: rgba(225, 207, 8, 1);
 			color: #1d4242;
 			font-size: 19px;
 		}
 
 		#start-btn:hover{
-			background: #94d6d6;
-		background: -moz-linear-gradient(left, #94d6d6, #b1fbfb);
-		background: -webkit-linear-gradient(left, #94d6d6, #b1fbfb);
-		background: linear-gradient(to right, #94d6d6, #b1fbfb);
+		background: rgba(225, 207, 8, 1);
+		background: -moz-linear-gradient(left,rgba(225, 207, 8, .8), rgba(225, 207, 8, 1));
+		background: -webkit-linear-gradient(left, rgba(225, 207, 8, .8), rgba(225, 207, 8, 1));
+		background: linear-gradient(to rgba(225, 207, 8, .8), rgba(225, 207, 8, 1));
 		}
 	/*Start button END*/
 
@@ -171,6 +175,7 @@
 	}
 
 	.adv-head{
+		font-family: asphalt;
 		margin-top: 15px;
 		margin-bottom: 15px;
 		color: #1d4542;
@@ -185,17 +190,17 @@
 		margin-top: 15px;
 		margin-left: 5px;
 		width: 150px;
-		background-color: #1d4242; 
+		background-color: rgba(30, 70, 70, 1); 
 		color: white;
 		text-decoration: none;
 	}
 
 	.adv-btn:hover{
 		color: white;
-		background: #bcbcbc;
-		background: -moz-linear-gradient(left, #416262, #1d4542);
-		background: -webkit-linear-gradient(left, #416262, #1d4542);
-		background: linear-gradient(to right, #416262, #1d4542);
+		background: rgba(30, 70, 70, 1);
+		background: -moz-linear-gradient(left, rgba(30, 70, 70, .8), rgba(30, 70, 70, 1));
+		background: -webkit-linear-gradient(left, rgba(30, 70, 70, .8), rgba(30, 70, 70, 1));
+		background: linear-gradient(to right, rgba(30, 70, 70, .8), rgba(30, 70, 70, 1));
 	}
 
 	.adv-btn:focus{
@@ -215,9 +220,9 @@
 		margin-top: 60px;
 		height: 100px;	
 		background: #1d4242;
-		background: -moz-linear-gradient(left, #5a7373, #1d4242, #5a7373);
-		background: -webkit-linear-gradient(left, #5a7373, #1d4242, #5a7373);
-		background: linear-gradient(to right, #5a7373, #1d4242, #5a7373);
+		background: -moz-linear-gradient(left, rgba(30, 70, 70, .8), rgba(30, 70, 70, 1), rgba(30, 70, 70, .7));
+		background: -webkit-linear-gradient(left, rgba(30, 70, 70, .8), rgba(30, 70, 70, 1), rgba(30, 70, 70, .7));
+		background: linear-gradient(to right, rgba(30, 70, 70, .8), rgba(30, 70, 70, 1), rgba(30, 70, 70, .7));
 	}
 
 /*Footer END*/
