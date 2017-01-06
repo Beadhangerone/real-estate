@@ -64,7 +64,7 @@
 
 	#header{
 		color: white;
-		height: 525px;
+		height: 488px;
 		background: #1d4242 url('/header-pattern.png') center bottom;
 		background-size: cover;
 	}
@@ -102,16 +102,18 @@
 	/*Message*/
 		#message h2{
 			margin-top: 35px;
+			margin-bottom: 0;
 			font-size: 52px;
 		}
 		#message h4{
-		font-size: 25px;
-		font-variant: small-caps;
+			margin-top: 0;
+			font-size: 25px;
+			font-variant: small-caps;
 		}
 
 		#slogan{
-			margin-top: 60px;
-			font-size: 26px;
+			margin-top: 30px;
+			font-size: 24px;
 			color: #b4ffff;
 		}
 	/*Message END*/
@@ -119,7 +121,7 @@
 	/*Start button*/
 		#start-btn{
 			width: 230px;
-			margin-top: 20px;
+			margin-top: 34px;
 			background-color: #b4ffff;
 			color: #1d4242;
 			font-size: 19px;
@@ -136,8 +138,8 @@
 	#main-image{
 		float: right;
 		margin-right: 50px;
-		width: 680px;
-		height: 370px;
+		width: 660px;
+		height: 350px;
 	}
 /*Header END*/
 

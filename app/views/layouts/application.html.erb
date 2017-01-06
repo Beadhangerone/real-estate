@@ -44,21 +44,28 @@
 					</li>
 				</ul>
 			</div>
-
 			<div class="row">
 				<div class="col-xs-4">
-					<center id="message">
-						<h2 class="asphalt">Welcome!</h2>
-						<h4>You are here</h4>
-						<div id="slogan">
-							We can help you to find the best real estate offers on the market!
-						</div>
-						<a href="#">
-							<a href="<%=estate_index_path%>" class="btn" id="start-btn">
-								Find Real Estate for Me!
-							</a>
-						</a>
-					</center>
+					<%if @msg%>
+						<center id="message">
+							<%if @msg[:h1]%>
+								<h2 class="asphalt"><%= @msg[:h1]%></h2>
+							<%end%>
+							<%if @msg[:h2]%>
+								<h4><%=@msg[:h2]%></h4>
+							<%end%>
+							<%if @msg[:slogan]%>	
+								<div id="slogan"><%=@msg[:slogan]%></div>
+							<%end%>
+							<%if @msg[:btn]%>
+								<a href="#">
+									<a href="<%=@msg[:btn][:href]%>" class="btn" id="start-btn">
+										<%=@msg[:btn][:text]%>
+									</a>
+								</a>
+							<%end%>
+						</center>
+					<%end%>
 				</div>
 				<div class="col-xs-8">
 					<img id="main-image" class="shadow-md" src="/main image.jpg">
