@@ -77,7 +77,7 @@
 	#header{
 		color: white;
 		padding-bottom: 30px;
-		background: #1d4242 url('/header-pattern.png') center bottom;
+		background: #1d4242 url('/header-pattern.png');
 		background-size: cover;
 	}
 

@@ -3,11 +3,10 @@
 	<form method="get" class="form-group">
 
 		<caption>State:</caption>
-		<select class="form-control" name="state" onchange='this.form.submit()'>
+		<select id="state-select" class="form-control" name="state">
 
-			<option <%unless params[:state]%> selected <%end%> disabled>
-		 		Any
-		 	</option>
+			<option <%if params[:state]=='Any'%> selected <%end%>>Any</option>
+
 			<option <%if params[:state]=='New York'%> selected <%end%>>New York</option>
 			<option <%if params[:state]=='Los Angeles'%> selected <%end%>>Los Angeles</option>
 			<option <%if params[:state]=='California'%> selected <%end%>>California</option>
@@ -16,11 +15,11 @@
 
 
 		<caption>Region:</caption>
-		<select class="form-control" <%unless params[:state]%> disabled <%end%> 
+		<select id="region-select" class="form-control" <%if not params[:state] or params[:state] == 'Any'%> disabled <%end%> 
 		name="region" onchange='this.form.submit()'>
 
-		 	<option <%unless params[:region]%> selected <%end%> disabled>
-		 		Any
+		 	<option <%if params[:region]=='Any' or params[:state] == 'Any'%> selected <%end%>>
+			 	Any
 		 	</option>
 
 			<%if params[:state]=='New York'%> 
@@ -56,7 +55,7 @@
 		<caption>Bedrooms:</caption>
 		<select class="form-control" name="bedrooms"  onchange='this.form.submit()'>
 
-		<option <%unless params[:bedrooms]%> selected <%end%> disabled>Any</option>
+		<option>Any</option>
 
 		<option <%if params[:bedrooms]=='1'%> selected <%end%>>1</option>
 		<option <%if params[:bedrooms]=='2'%> selected <%end%>>2</option>
