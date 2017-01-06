@@ -4,7 +4,7 @@ class EstateController < ApplicationController
 	def index
 		@msg = {} #header message
 		@msg[:h1] = 'Find Estate!'
-		@msg[:h2] = 'Fill in your desired options below'
+		@msg[:h2] = 'Fill in the desired options below'
 		
 		if @state and @region and @bedrooms
 			@estates = Estate.where(state: @state, region: @region, bedrooms: @bedrooms)

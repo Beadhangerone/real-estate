@@ -1,9 +1,15 @@
 <%=render partial: '/estate/params-block' %>
 
 <%if @estates%>
-	<%@estates.each do |estate|%>
-		state:<%=estate.state%>
-		region:<%=estate.region%>
-		bedrooms:<%=estate.bedrooms%>
-	<%end%>
+	<div class="row">
+		<%@estates.each do |estate|%>
+			<div class="col-xs-4">
+				<center>
+					<b>state:</b> <%=estate.state%> <br>
+					<b>region:</b> <%=estate.region%> <br>
+					<b>bedrooms:</b> <%=estate.bedrooms%>
+				</center>
+			</div>
+		<%end%>
+	</div>
 <%end%>
