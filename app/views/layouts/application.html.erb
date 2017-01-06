@@ -48,14 +48,14 @@
 				<div class="col-xs-4">
 					<%if @msg%>
 						<center id="message">
+							<div class="infinite" id="slogan">You are in the right place
+							</div>
+
 							<%if @msg[:h1]%>
-								<h2 class="asphalt"><%= @msg[:h1]%></h2>
+								<div id="h1" class="asphalt"><%= @msg[:h1]%></div>
 							<%end%>
-							<%if @msg[:h2]%>
-								<h4><%=@msg[:h2]%></h4>
-							<%end%>
-							<%if @msg[:slogan]%>	
-								<div id="slogan"><%=@msg[:slogan]%></div>
+							<%if @msg[:h2]%>	
+								<div class="modernroman" id="h2"><%=@msg[:h2]%></div>
 							<%end%>
 							<%if @msg[:btn]%>
 								<a href="#">
@@ -67,9 +67,11 @@
 						</center>
 					<%end%>
 				</div>
-				<div class="col-xs-8">
-					<img id="main-image" class="shadow-md" src="/main image.jpg">
-				</div>
+				<%if @img%>
+					<div class="col-xs-8">
+						<img id="main-image" class="shadow-md" src="<%=@img%>">
+					</div>
+				<%end%>
 			</div>
 		</div>
 	</div>

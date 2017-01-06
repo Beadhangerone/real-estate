@@ -57,6 +57,18 @@
     		src: url(/fonts/asphalt.ttf);
 		}
 		.asphalt{font-family: asphalt}
+
+		@font-face{
+			font-family: infinite;
+    		src: url(/fonts/Infinite_Stroke.otf);
+		}
+		.infinite{font-family: infinite}
+
+		@font-face{
+			font-family: modernroman;
+			src: url(/fonts/modern_roman.otf)
+		}
+		.modernroman{font-family: modernroman}
 	/*Fonts END*/
 /*custom END*/
 
@@ -64,13 +76,14 @@
 
 	#header{
 		color: white;
-		height: 488px;
+		padding-bottom: 30px;
 		background: #1d4242 url('/header-pattern.png') center bottom;
 		background-size: cover;
 	}
 
 	#nav-bar{
-		margin: 20px 0;
+		margin-top: 20px;
+		margin-bottom: 5px;
 	}
 	/*Company logo*/
 		.company-name{
@@ -100,19 +113,19 @@
 	/*Navigation END*/
 
 	/*Message*/
-		#message h2{
-			margin-top: 35px;
-			margin-bottom: 0;
-			font-size: 52px;
-		}
-		#message h4{
+		#slogan{
 			margin-top: 0;
 			font-size: 25px;
-			font-variant: small-caps;
+			color: #ffe400;
 		}
-
-		#slogan{
-			margin-top: 30px;
+		#h1{
+			margin-top: 10px;
+			font-size: 50px;
+			text-align: center;
+		}
+		#h2{
+			margin-bottom: 0;
+			margin-top: 5px;
 			font-size: 24px;
 			color: #b4ffff;
 		}
@@ -121,7 +134,7 @@
 	/*Start button*/
 		#start-btn{
 			width: 230px;
-			margin-top: 34px;
+			margin-top: 30px;
 			background-color: #b4ffff;
 			color: #1d4242;
 			font-size: 19px;

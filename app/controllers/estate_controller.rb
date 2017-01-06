@@ -2,8 +2,7 @@ class EstateController < ApplicationController
 	def index
 		@msg = {} #header message
 		@msg[:h1] = 'Find Estate!'
-		@msg[:h2] = 'You are in the right place'
-		@msg[:slogan] = 'We help you to find the best real estate offers from the whole United States!'
+		@msg[:h2] = 'Fill in your desired options below'
 
 		state = params[:state]
 		region = params[:region]
@@ -18,6 +17,8 @@ class EstateController < ApplicationController
 			@estates = Estate.where(state: state, bedrooms: bedrooms)
 		elsif state
 			@estates = Estate.where(state: state)
+		elsif bedrooms
+			@estates = Estate.where(bedrooms: bedrooms)
 		else 
 			@estates = Estate.all
 		end		

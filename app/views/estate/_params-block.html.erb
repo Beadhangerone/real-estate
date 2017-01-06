@@ -4,8 +4,10 @@
 
 		<caption>State:</caption>
 		<select class="form-control" name="state" onchange='this.form.submit()'>
-			<option disabled="" selected="">Choose the state</option>
 
+			<option <%unless params[:state]%> selected <%end%> disabled>
+		 		Any
+		 	</option>
 			<option <%if params[:state]=='New York'%> selected <%end%>>New York</option>
 			<option <%if params[:state]=='Los Angeles'%> selected <%end%>>Los Angeles</option>
 			<option <%if params[:state]=='California'%> selected <%end%>>California</option>
@@ -14,10 +16,8 @@
 
 
 		<caption>Region:</caption>
-		<select class="form-control" <%unless params[:state]%> disabled <%end%>
-			name="region" onchange='this.form.submit()'>
-<!-- 
-			<option disabled="" selected="">Choose the region</option> -->
+		<select class="form-control" <%unless params[:state]%> disabled <%end%> 
+		name="region" onchange='this.form.submit()'>
 
 		 	<option <%unless params[:region]%> selected <%end%> disabled>
 		 		Any
@@ -54,10 +54,8 @@
 		</select>
 
 		<caption>Bedrooms:</caption>
-		<select class="form-control"<%unless params[:state]%> disabled <%end%>
-		name="bedrooms"  onchange='this.form.submit()'>
+		<select class="form-control" name="bedrooms"  onchange='this.form.submit()'>
 
-<!-- 		<option disabled="" selected="">Choose bedrooms amount</option> -->
 		<option <%unless params[:bedrooms]%> selected <%end%> disabled>Any</option>
 
 		<option <%if params[:bedrooms]=='1'%> selected <%end%>>1</option>
