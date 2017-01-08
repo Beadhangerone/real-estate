@@ -6,6 +6,17 @@ class EstateController < ApplicationController
 			h1: 'Find Estate!', 
 			h2: 'Fill in the desired options below!',
 		})
+
+		@options = {
+			states: ['New York', 'Los Angeles', 'California', 'Texas'],
+			regions: {
+				NY: ['NY 1', 'NY 2', 'NY 3', 'NY 4'],
+				LA: ['LA 1', 'LA 2', 'LA 3', 'LA 4'],
+				CA: ['CA 1', 'CA 2', 'CA 3', 'CA 4'],
+				TX: ['TX 1', 'TX 2', 'TX 3', 'TX 4'],
+			},
+			bedrooms: ['1', '2', '3', '4', '5']
+		}
 		
 		if @state and @region and @bedrooms
 			@estates = Estate.where(state: @state, region: @region, bedrooms: @bedrooms)

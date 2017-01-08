@@ -7,10 +7,8 @@
 
 			<option <%if not @state%> selected <%end%>>Any</option>
 
-			<option <%if @state=='New York'%> selected <%end%>>New York</option>
-			<option <%if @state=='Los Angeles'%> selected <%end%>>Los Angeles</option>
-			<option <%if @state=='California'%> selected <%end%>>California</option>
-			<option <%if @state=='Texas'%> selected <%end%>>Texas</option>
+			<%=render partial: '/estate/options', 
+			locals: {var: @state, options: @options[:states]}%>
 		</select>
 
 
@@ -20,46 +18,34 @@
 
 		 	<option <%if not @state%> selected <%end%>>Any</option>
 
-			<%if @state=='New York'%> 
-				<option <%if @region=='NY 1'%> selected <%end%>>NY 1</option>
-				<option <%if @region=='NY 2'%> selected <%end%>>NY 2</option>
-				<option <%if @region=='NY 3'%> selected <%end%>>NY 3</option>
-				<option <%if @region=='NY 4'%> selected <%end%>>NY 4</option>
+			<%if @state=='New York'%>
+				<%=render partial: '/estate/options', 
+				locals: {var: @region, options: @options[:regions][:NY]}%>
 			<%end%>
 
 			<%if @state=='Los Angeles'%> 
-				<option <%if @region=='LA 1'%> selected <%end%>>LA 1</option>
-				<option <%if @region=='LA 2'%> selected <%end%>>LA 2</option>
-				<option <%if @region=='LA 3'%> selected <%end%>>LA 3</option>
-				<option <%if @region=='LA 4'%> selected <%end%>>LA 4</option>
+				<%=render partial: '/estate/options', 
+				locals: {var: @region, options: @options[:regions][:LA]}%>
 			<%end%>
 
 			<%if @state=='California'%> 
-				<option <%if @region=='CA 1'%> selected <%end%>>CA 1</option>
-				<option <%if @region=='CA 2'%> selected <%end%>>CA 2</option>
-				<option <%if @region=='CA 3'%> selected <%end%>>CA 3</option>
-				<option <%if @region=='CA 4'%> selected <%end%>>CA 4</option>
+				<%=render partial: '/estate/options', 
+				locals: {var: @region, options: @options[:regions][:CA]}%>
 			<%end%>
 
 			<%if @state=='Texas'%> 
-				<option <%if @region=='TX 1'%> selected <%end%>>TX 1</option>
-				<option <%if @region=='TX 2'%> selected <%end%>>TX 2</option>
-				<option <%if @region=='TX 3'%> selected <%end%>>TX 3</option>
-				<option <%if @region=='TX 4'%> selected <%end%>>TX 4</option>
+				<%=render partial: '/estate/options', 
+				locals: {var: @region, options: @options[:regions][:TX]}%>
 			<%end%>
 		</select>
 
 		<caption>Bedrooms:</caption>
 		<select class="form-control" name="bedrooms"  onchange='this.form.submit()'>
 
-		<option>Any</option>
+			<option>Any</option>
 
-		<option <%if @bedrooms=='1'%> selected <%end%>>1</option>
-		<option <%if @bedrooms=='2'%> selected <%end%>>2</option>
-		<option <%if @bedrooms=='3'%> selected <%end%>>3</option>
-		<option <%if @bedrooms=='4'%> selected <%end%>>4</option>
-		<option <%if @bedrooms=='5'%> selected <%end%>>5</option>
-			
+			<%=render partial: '/estate/options', 
+			locals: {var: @bedrooms, options: @options[:bedrooms]}%>		
 		</select>
 
 	</form>
