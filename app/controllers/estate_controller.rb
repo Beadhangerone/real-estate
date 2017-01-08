@@ -3,7 +3,7 @@ class EstateController < ApplicationController
 
 	def index
 		define_head({
-			h1: 'Find Estate!!', 
+			h1: 'Find Estate!', 
 			h2: 'Fill in the desired options below!',
 		})
 		
