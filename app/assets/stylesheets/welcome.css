@@ -131,6 +131,10 @@
 	/*Navigation END*/
 
 	/*Message*/
+		#message{
+			margin-top: 40px;
+		}
+
 		#slogan{
 			margin-top: 0;
 			font-size: 25px;
@@ -233,6 +237,7 @@
 	.footer{
 		color: white;
 		margin-top: 60px;
+		bottom: 0;
 		height: 100px;	
 		background: #1d4242;
 		background: -moz-linear-gradient(left, rgba(30, 70, 70, .8), rgba(30, 70, 70, 1), rgba(30, 70, 70, .7));

@@ -1,10 +1,11 @@
 class EstateController < ApplicationController
-	before_action :custom_estate_params, only: [:index]
+	before_action :custom_estate_params, only: [:index] 
 
 	def index
-		@msg = {} #header message
-		@msg[:h1] = 'Find Estate!'
-		@msg[:h2] = 'Fill in the desired options below'
+		define_head({
+			h1: 'Find Estate!!', 
+			h2: 'Fill in the desired options below!',
+		})
 		
 		if @state and @region and @bedrooms
 			@estates = Estate.where(state: @state, region: @region, bedrooms: @bedrooms)
@@ -20,8 +21,6 @@ class EstateController < ApplicationController
 			@estates = Estate.all
 		end		
 	end
-
-	private
 
 	def custom_estate_params			
 		if params[:state] == 'Any'
