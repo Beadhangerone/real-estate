@@ -22,23 +22,22 @@ class EstateController < ApplicationController
 		end		
 	end
 
-	def custom_estate_params			
-		if params[:state] == 'Any'
-			@state = nil
-			@region = nil
-		else
-			@state = params[:state]		
-		end
-		if params[:region] == 'Any'
-			@region = nil
-		else
-			@region =params[:region]
-		end
+	private
 
-		if params[:bedrooms] == 'Any'
+	def custom_estate_params
+		@state = params[:state]
+		@region = params[:region]
+		@bedrooms = params[:bedrooms]
+	
+		if @state == 'Any'
+			@state = nil
+			@region = nil		
+		end
+		if @region == 'Any'
+			@region = nil
+		end
+		if @bedrooms == 'Any'
 			@bedrooms = nil
-		else
-			@bedrooms = params[:bedrooms]
 		end
 	end
 end
