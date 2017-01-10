@@ -17,20 +17,11 @@ class EstateController < ApplicationController
 			},
 			bedrooms: ['1', '2', '3', '4', '5']
 		}
-		
-		if @state and @region and @bedrooms
-			@estates = Estate.where(state: @state, region: @region, bedrooms: @bedrooms)
-		elsif @state and @region
-			@estates = Estate.where(state: @state, region: @region)
-		elsif @state and @bedrooms
-			@estates = Estate.where(state: @state, bedrooms: @bedrooms)
-		elsif @state
-			@estates = Estate.where(state: @state)
-		elsif @bedrooms
-			@estates = Estate.where(bedrooms: @bedrooms)
-		else 
-			@estates = Estate.all
-		end		
+
+		@estates = Estate.where(nil) # creates an anonymous scope
+  		@estates = @estates.state(@state) if @state
+  		@estates = @estates.region(@region) if @region
+  		@estates = @estates.bedrooms(@bedrooms) if @bedrooms	
 	end
 
 	private
