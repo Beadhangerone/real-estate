@@ -48,5 +48,16 @@
 			locals: {var: @bedrooms, options: @options[:bedrooms]}%>		
 		</select>
 
+		<div class="row">
+			<div class="col-xs-6">
+				<input type="checkbox" name="rent" onchange="this.form.submit()"
+				<%if @rent == 'on'%> checked <%end%>> For rent
+			</div>
+			<div class="col-xs-6">
+				<input type="checkbox" name="sale" onchange="this.form.submit()" 
+				<%if @sale == 'on'%> checked <%end%>> For sale
+			</div>
+		</div>
+
 	</form>
 </div>

@@ -21,7 +21,9 @@ class EstateController < ApplicationController
 		@estates = Estate.where(nil) # creates an anonymous scope
   		@estates = @estates.state(@state) if @state
   		@estates = @estates.region(@region) if @region
-  		@estates = @estates.bedrooms(@bedrooms) if @bedrooms	
+  		@estates = @estates.bedrooms(@bedrooms) if @bedrooms
+  		@estates = @estates.rent(@rent) if @rent == 'on'
+  		@estates = @estates.sale(@sale) if @sale == 'on'
 	end
 
 	private
@@ -30,6 +32,8 @@ class EstateController < ApplicationController
 		@state = params[:state]
 		@region = params[:region]
 		@bedrooms = params[:bedrooms]
+		@rent = params[:rent]
+		@sale = params[:sale]
 	
 		if @state == 'Any'
 			@state = nil

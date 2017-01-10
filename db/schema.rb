@@ -17,8 +17,8 @@ ActiveRecord::Schema.define(version: 20170105192416) do
     t.text     "state"
     t.text     "region"
     t.integer  "bedrooms"
-    t.boolean  "sell"
-    t.boolean  "rent"
+    t.text     "sale"
+    t.text     "rent"
     t.integer  "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
