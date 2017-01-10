@@ -5,8 +5,7 @@ class CreateEstates < ActiveRecord::Migration[5.0]
       t.text :state
       t.text :region
       t.integer :bedrooms
-      t.text :sale
-      t.text :rent
+      t.text :offer
       t.integer :price
       t.timestamps
     end

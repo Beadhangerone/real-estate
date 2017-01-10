@@ -17,8 +17,7 @@ ActiveRecord::Schema.define(version: 20170105192416) do
     t.text     "state"
     t.text     "region"
     t.integer  "bedrooms"
-    t.text     "sale"
-    t.text     "rent"
+    t.text     "offer"
     t.integer  "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

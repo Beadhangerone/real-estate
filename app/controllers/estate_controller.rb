@@ -22,8 +22,7 @@ class EstateController < ApplicationController
   		@estates = @estates.state(@state) if @state
   		@estates = @estates.region(@region) if @region
   		@estates = @estates.bedrooms(@bedrooms) if @bedrooms
-  		@estates = @estates.rent(@rent) if @rent == 'on'
-  		@estates = @estates.sale(@sale) if @sale == 'on'
+  		@estates = @estates.offer(@offer) if @offer
 	end
 
 	private
@@ -32,8 +31,7 @@ class EstateController < ApplicationController
 		@state = params[:state]
 		@region = params[:region]
 		@bedrooms = params[:bedrooms]
-		@rent = params[:rent]
-		@sale = params[:sale]
+		@offer = params[:offer]
 	
 		if @state == 'Any'
 			@state = nil
@@ -44,6 +42,10 @@ class EstateController < ApplicationController
 		end
 		if @bedrooms == 'Any'
 			@bedrooms = nil
+		end
+
+		if @offer == 'any'
+			@offer = nil
 		end
 	end
 end
