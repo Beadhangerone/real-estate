@@ -11,7 +11,7 @@
 			locals: {var: @state, options: @options[:states]}%>
 		</select>
 
-
+		<br>
 		<caption>Region:</caption>
 		<select id="region-select" class="form-control" <%if not @state %> disabled <%end%> 
 		name="region" onchange='this.form.submit()'>
@@ -38,7 +38,7 @@
 				locals: {var: @region, options: @options[:regions][:TX]}%>
 			<%end%>
 		</select>
-
+		<br>
 		<caption>Bedrooms:</caption>
 		<select class="form-control" name="bedrooms"  onchange='this.form.submit()'>
 
@@ -49,18 +49,24 @@
 		</select>
 		<br>
 		<caption>Offer:</caption>
-		<div class="row">
-			<div class="col-xs-4">
-				<input type="radio" name="offer" value= 'rent' onchange="this.form.submit()"
-				<%if @offer == 'rent'%> checked <%end%>> For rent
+		<div class="row" id="offer-radios">
+			<div class="col-xs-2">
+				<center>
+					<input type="radio" name="offer" value='rent' onchange="this.form.submit()"
+					<%if @offer == 'rent'%> checked <%end%>> For rent
+				</center>
 			</div>
-			<div class="col-xs-4">
-				<input type="radio" name="offer" value= 'sale' onchange="this.form.submit()" 
-				<%if @offer == 'sale'%> checked <%end%>> For sale
+			<div class="col-xs-2">
+				<center>
+					<input type="radio" name="offer" value='sale' onchange="this.form.submit()" 
+					<%if @offer == 'sale'%> checked <%end%>> For sale
+				</center>
 			</div>
-			<div class="col-xs-4">
-				<input type="radio" name="offer" value= 'any' onchange="this.form.submit()" 
-				<%if not @offer%> checked <%end%>> Any
+			<div class="col-xs-2">
+				<center>
+					<input type="radio" name="offer" value='any' onchange="this.form.submit()" 
+					<%if not @offer%> checked <%end%>> Any
+				</center>
 			</div>
 		</div>
 

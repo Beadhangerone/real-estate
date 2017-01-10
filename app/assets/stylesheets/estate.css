@@ -5,3 +5,11 @@
 	background: -webkit-linear-gradient(top, #dadada, #fbfbfb);
 	background: linear-gradient(to bottom, #dadada, #fbfbfb);
 }
+
+#offer-radios{
+	
+}
+
+#offer-radios input{
+	cursor: pointer;
+}
