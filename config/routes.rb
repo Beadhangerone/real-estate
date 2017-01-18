@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   get '/estate' => 'estate#index', as: 'estate_index'
+  get '/estate/:id' => 'estate#show', as: 'estate_show'
 
   get '/about' => 'welcome#about', as: 'about'
 end

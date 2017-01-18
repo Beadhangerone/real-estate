@@ -5,6 +5,8 @@
 		<%@estates.each do |estate|%>
 			<div class="col-xs-4">
 				<center>
+					<a href="<%=estate_show_path(estate)%>"><h3><%=estate.title%></h3></a>
+					<b>price:</b> $<%=estate.price%> <br>
 					<b>state:</b> <%=estate.state%> <br>
 					<b>region:</b> <%=estate.region%> <br>
 					<b>bedrooms:</b> <%=estate.bedrooms%> <br>
